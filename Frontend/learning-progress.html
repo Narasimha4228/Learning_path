@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Progress</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- ...existing header and navigation... -->
+
+    <section class="learning-progress">
+        <h1 class="heading">Learning Progress</h1>
+        <div class="progress-container">
+            <div class="charts-grid">
+                <div class="chart-box">
+                    <h3>Course Progress</h3>
+                    <canvas id="progressChart"></canvas>
+                    <div class="completion-rate">
+                        <span id="completionRate">0</span>% Completed
+                    </div>
+                </div>
+                
+                <div class="chart-box">
+                    <h3>Accuracy Trend</h3>
+                    <canvas id="accuracyChart"></canvas>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>Current Stats</h3>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Accuracy: <span id="accuracyScore">--%</span></span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-running"></i>
+                            <span>Learning Pace: <span id="learningPace">--</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/progress-tracker.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressTracker = new ProgressTracker();
+            progressTracker.initializeCharts();
+
+            // Fetch progress data from backend
+            async function fetchProgress() {
+                try {
+                    const response = await fetch('http://localhost:5002/api/progress', {
+                        headers: {
+                            'Authorization': `Bearer ${localStorage.getItem('token')}`
+                        }
+                    });
+                    const data = await response.json();
+                    progressTracker.updateProgress(data);
+                } catch (error) {
+                    console.error('Error fetching progress:', error);
+                }
+            }
+
+            // Update progress every 5 minutes
+            fetchProgress();
+            setInterval(fetchProgress, 300000);
+        });
+    </script>
+
+    <style>
+    .progress-container {
+        background: var(--white);
+        border-radius: .5rem;
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+
+    .charts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .chart-box {
+        background: var(--light-bg);
+        padding: 1.5rem;
+        border-radius: .5rem;
+        text-align: center;
+    }
+
+    .chart-box h3 {
+        margin-bottom: 1rem;
+        color: var(--black);
+        font-size: 1.8rem;
+    }
+
+    .completion-rate {
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        color: var(--main-color);
+    }
+
+    .stat-box {
+        background: var(--light-bg);
+        padding: 1.5rem;
+        border-radius: .5rem;
+    }
+
+    .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .stat-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.4rem;
+        color: var(--black);
+    }
+
+    .stat-item i {
+        color: var(--main-color);
+        font-size: 1.8rem;
+    }
+    </style>
+</body>
+</html>
