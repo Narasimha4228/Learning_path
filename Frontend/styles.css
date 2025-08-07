@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    background-image: url(https://media.istockphoto.com/id/1543362525/photo/back-end-development-concept-with-coding-and-programming-3d-illustration.jpg?s=2048x2048&w=is&k=20&c=WjpAIdDsOIUM3p414k_5LL0PE2bHb-2NnjAFA-_PrJU=);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    background-size:cover;
+}
+
+
+.container {
+    background-color: #fbf9fc;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styles */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input,
+.input-group select {
+    width: calc(100% - 12px);
+    padding: 8px;
+    border: 1px solid #15b1bf;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: #f0f5f6;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Link Styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Other */
+.terms-checkbox {
+    margin-top: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.terms-checkbox input {
+    margin-right: 5px;
+}
+
+.terms-checkbox label{
+    margin: 0px;
+    display: inline;
+}
+
+/* Style for conditional Instructor fields */
+.instructor-fields {
+    margin-top: 15px; /* Add some margin to separate it */
+    text-align: left;
+}

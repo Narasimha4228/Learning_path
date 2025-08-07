@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">Learning Path</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name" id="profileName">Loading...</h3>
+         <p class="role" id="profileRole">Loading...</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn" id="authButtons"></div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile" id="sidebarProfile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name" id="sideProfileName">Loading...</h3>
+      <p class="role" id="sideProfileRole">Loading...</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+      <a href="http://localhost:8501"><i class="fas fa-headset"></i><span>chatbot</span></a>
+   </nav>
+
+</div>
+
+<section class="home-grid">
+
+   <h1 class="heading">quick options</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <h3 class="title">likes and comments</h3>
+         <p class="likes">total likes : <span>25</span></p>
+         <a href="#" class="inline-btn">view likes</a>
+         <p class="likes">total comments : <span>12</span></p>
+         <a href="#" class="inline-btn">view comments</a>
+         <p class="likes">saved playlists : <span>4</span></p>
+         <a href="#" class="inline-btn">view playlists</a>
+      </div>
+
+      <div class="box">
+         <h3 class="title">top categories</h3>
+         <div class="flex">
+            <a href="#"><i class="fas fa-code"></i><span>development</span></a>
+            <a href="#"><i class="fas fa-chart-simple"></i><span>business</span></a>
+            <a href="#"><i class="fas fa-pen"></i><span>design</span></a>
+            <a href="#"><i class="fas fa-chart-line"></i><span>marketing</span></a>
+            <a href="#"><i class="fas fa-music"></i><span>music</span></a>
+            <a href="#"><i class="fas fa-camera"></i><span>photography</span></a>
+            <a href="#"><i class="fas fa-cog"></i><span>software</span></a>
+            <a href="#"><i class="fas fa-vial"></i><span>science</span></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3 class="title">popular topics</h3>
+         <div class="flex">
+            <a href="#"><i class="fab fa-html5"></i><span>HTML</span></a>
+            <a href="#"><i class="fab fa-css3"></i><span>CSS</span></a>
+            <a href="#"><i class="fab fa-js"></i><span>javascript</span></a>
+            <a href="#"><i class="fab fa-react"></i><span>react</span></a>
+            <a href="#"><i class="fab fa-php"></i><span>PHP</span></a>
+            <a href="#"><i class="fab fa-bootstrap"></i><span>bootstrap</span></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3 class="title">become a tutor</h3>
+         <p class="tutor">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, nam?</p>
+         <a href="teachers.html" class="inline-btn">get started</a>
+      </div>
+
+   </div>
+
+</section>
+
+<section class="courses">
+
+   <h1 class="heading">our courses</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-2.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-1.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete HTML tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-3.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-2.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete CSS tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-4.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-3.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete JS tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-5.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-4.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete Boostrap tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-6.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-5.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete JQuery tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-7.jpg" alt="">
+            <div class="info">
+               <h3>john deo</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-6.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete SASS tutorial</h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+   </div>
+
+   <div class="more-btn">
+      <a href="courses.html" class="inline-option-btn">view all courses</a>
+   </div>
+
+</section>
+
+<section class="learning-progress">
+   <h1 class="heading">Learning Progress</h1>
+   <div class="box-container">
+      <div class="box">
+         <h3 class="title">Your Learning Pace</h3>
+         <div class="stats">
+            <p class="pace">Current Pace: <span id="learningPace">Analyzing...</span></p>
+            <p class="accuracy">Accuracy: <span id="accuracyScore">--%</span></p>
+         </div>
+         <button onclick="analyzeLearning()" class="inline-btn">
+            <i class="fas fa-chart-line"></i> Analyze Progress
+         </button>
+      </div>
+
+      <div class="box">
+         <h3 class="title">Recommendations</h3>
+         <div class="recommendations" id="recommendationsList">
+            <p><i class="fas fa-clock"></i> Session Duration: <span id="sessionDuration">--</span></p>
+            <p><i class="fas fa-book"></i> Content Type: <span id="contentType">--</span></p>
+            <p><i class="fas fa-tasks"></i> Practice Level: <span id="practiceLevel">--</span></p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<footer class="footer">
+
+   &copy; copyright @ 2025 by <span>mr. web designer</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+<script>
+    // Check authentication status and update UI
+    document.addEventListener('DOMContentLoaded', function() {
+        const token = localStorage.getItem('token');
+        const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+        const authButtons = document.getElementById('authButtons');
+        const profileName = document.getElementById('profileName');
+        const profileRole = document.getElementById('profileRole');
+
+        if (token && userData) {
+            // User is logged in
+            profileName.textContent = userData.fullName || 'User';
+            profileRole.textContent = userData.role || 'student';
+            authButtons.innerHTML = `
+                <a href="#" onclick="logout()" class="option-btn">logout</a>
+            `;
+        } else {
+            // User is not logged in
+            profileName.textContent = 'Guest User';
+            profileRole.textContent = 'visitor';
+        }
+    });
+
+    // Logout function
+    function logout() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('userData');
+        window.location.href = 'login.html';
+    }
+
+    // Update all profile sections with user data
+    function updateProfileSections() {
+        const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+        const token = localStorage.getItem('token');
+        const isLoggedIn = token && userData;
+
+        // Elements to update
+        const elements = {
+            profileName: document.getElementById('profileName'),
+            profileRole: document.getElementById('profileRole'),
+            sideProfileName: document.getElementById('sideProfileName'),
+            sideProfileRole: document.getElementById('sideProfileRole'),
+            authButtons: document.getElementById('authButtons')
+        };
+
+        if (isLoggedIn) {
+            // Update main profile
+            elements.profileName.textContent = userData.fullName || 'User';
+            elements.profileRole.textContent = userData.role || 'student';
+            
+            // Update sidebar profile
+            elements.sideProfileName.textContent = userData.fullName || 'User';
+            elements.sideProfileRole.textContent = userData.role || 'student';
+            
+            // Update auth buttons
+            elements.authButtons.innerHTML = `
+                <a href="profile.html" class="option-btn">Profile</a>
+                <a href="#" onclick="logout()" class="option-btn">Logout</a>
+            `;
+
+            // Add role-specific elements
+            if (userData.role === 'instructor') {
+                elements.authButtons.innerHTML += `
+                    <a href="instructor/dashboard.html" class="option-btn">Dashboard</a>
+                `;
+            }
+        } else {
+            // Reset to default state for non-logged in users
+            const defaultState = {
+                name: 'Guest User',
+                role: 'visitor'
+            };
+
+            elements.profileName.textContent = defaultState.name;
+            elements.profileRole.textContent = defaultState.role;
+            elements.sideProfileName.textContent = defaultState.name;
+            elements.sideProfileRole.textContent = defaultState.role;
+            elements.authButtons.innerHTML = `
+                <a href="login.html" class="option-btn">Login</a>
+                <a href="register.html" class="option-btn">Register</a>
+            `;
+        }
+    }
+
+    // Call on page load
+    document.addEventListener('DOMContentLoaded', updateProfileSections);
+
+    // Enhanced logout function
+    function logout() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('userData');
+        showMessage('Logged out successfully', 'success');
+        setTimeout(() => {
+            window.location.href = 'login.html';
+        }, 1000);
+    }
+
+    // Helper function to show messages
+    function showMessage(message, type) {
+        const messageBox = document.createElement('div');
+        messageBox.className = `message-box ${type}`;
+        messageBox.textContent = message;
+        document.body.appendChild(messageBox);
+        
+        setTimeout(() => {
+            messageBox.remove();
+        }, 3000);
+    }
+</script>
+
+<style>
+.message-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+</style>
+
+</body>
+</html>
